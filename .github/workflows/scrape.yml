@@ -18,6 +18,7 @@ jobs:
     - name: Fetch country populations
       run: |-
         wget -nc -P data "https://datahub.io/core/population/r/population.csv"
+        mv data/population.csv data/country-populations.csv
     - name: Fetch IMF indicators
       run: |-
         wget -nc -P data "https://datahub.io/core/imf-weo/r/indicators.csv" 
