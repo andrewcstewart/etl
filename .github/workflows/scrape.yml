@@ -24,7 +24,7 @@ jobs:
         mv data/indicators.csv data/country-imf-indicators.csv
     - name: Fetch IMF values
       run: |-
-        wget -nc -O data "https://datahub.io/core/imf-weo/r/values.csv" 
+        wget -nc -P data "https://datahub.io/core/imf-weo/r/values.csv" 
         mv data/values.csv data/country-imf-values.csv
     - name: Commit and push if it changed
       run: |-
