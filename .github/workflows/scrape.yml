@@ -14,10 +14,10 @@ jobs:
       uses: actions/checkout@v2
     - name: Fetch country-codes
       run: |-
-        wget -P data "https://raw.githubusercontent.com/datasets/country-codes/master/data/country-codes.csv"
+        wget -nc -P data "https://raw.githubusercontent.com/datasets/country-codes/master/data/country-codes.csv"
     - name: Fetch country populations
       run: |-
-        wget -P data "https://datahub.io/core/population/r/population.csv"
+        wget -nc -P data "https://datahub.io/core/population/r/population.csv"
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
