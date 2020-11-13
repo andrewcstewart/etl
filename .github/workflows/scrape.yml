@@ -20,10 +20,12 @@ jobs:
         wget -nc -P data "https://datahub.io/core/population/r/population.csv"
     - name: Fetch IMF indicators
       run: |-
-        wget -nc -P data "https://datahub.io/core/imf-weo/r/indicators.csv" & mv data/indicators.csv data/country-imf-indicators.csv
+        wget -nc -P data "https://datahub.io/core/imf-weo/r/indicators.csv" 
+        mv data/indicators.csv data/country-imf-indicators.csv
     - name: Fetch IMF values
       run: |-
-        wget -nc -O data "https://datahub.io/core/imf-weo/r/values.csv" & mv data/values.csv data/country-imf-values.csv
+        wget -nc -O data "https://datahub.io/core/imf-weo/r/values.csv" 
+        mv data/values.csv data/country-imf-values.csv
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
