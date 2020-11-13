@@ -20,7 +20,7 @@ jobs:
         wget -nc -P data "https://datahub.io/core/population/r/population.csv"
     - name: Fetch IMF indicators
       run: |-
-        wget -nc -O data/country-imf-indicators.csv "https://datahub.io/core/imf-weo/r/indicators.csv"
+        wget -nc -P data "https://datahub.io/core/imf-weo/r/indicators.csv"
     - name: Fetch IMF values
       run: |-
         wget -nc -O data/country-imf-values.csv "https://datahub.io/core/imf-weo/r/values.csv"           
