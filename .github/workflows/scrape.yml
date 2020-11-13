@@ -18,6 +18,12 @@ jobs:
     - name: Fetch country populations
       run: |-
         wget -nc -P data "https://datahub.io/core/population/r/population.csv"
+    - name: Fetch IMF indicators
+      run: |-
+        wget -nc -P data -O country-imf-indicators.csv "https://datahub.io/core/imf-weo/r/indicators.csv"
+    - name: Fetch IMF values
+      run: |-
+        wget -nc -P data -O country-imf-values.csv "https://datahub.io/core/imf-weo/r/values.csv"                
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
