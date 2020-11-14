@@ -27,6 +27,12 @@ jobs:
       run: |-
         wget -nc -P data "https://datahub.io/core/imf-weo/r/values.csv" 
         mv data/values.csv data/country-imf-values.csv
+    - name: Fetch CPDS
+      run: |-
+        wget -nc -P data https://www.cpds-data.org/images/Update2020/CPDS_1960-2018_Update_2020.xlsx
+    - name: Fetch DPI
+      run: |-
+        wget -nc -P data https://development-data-hub-s3-public.s3.amazonaws.com/ddhfiles/97940/dpi2012.xls
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
